@@ -1,0 +1,313 @@
+/*--
+/*  2.3 - Form CSS
+/*----------------------------------------*/
+
+// Single Form 
+.single-form{
+    margin-top: 20px;
+
+    & input:not([type="checkbox"]):not([type="radio"]),
+    & textarea{
+        width: 100%;
+        height: 60px;
+        padding: 0 25px;
+        font-size: 15px;
+        color: #52565b;
+        transition: $transition-base;
+        border: 1px solid rgba($primary, 0.2);
+        border-radius: 10px;
+        background-color: $white;
+
+        @include placeholder{
+            opacity: 1;
+        }
+
+        & + input{
+            margin-top: 15px;
+        }
+
+        &:focus{
+            border-color: $primary;
+            outline: none;
+        }
+    }
+
+    & label{
+        font-size: 15px;
+        color: $dark;
+        margin-bottom: 12px;
+    }
+
+    & input[type="checkbox"]{
+        display: none;
+
+        & + label{
+            padding-left: 22px;
+            position: relative;
+            cursor: pointer;
+            margin-bottom: 0;
+            font-size: 15px;
+            
+            & span{
+                width: 14px;
+                height: 14px;
+                border: 1px solid #e1e1e1;
+                position: absolute;
+                display: block;
+                top: 4px;
+                left: 0;
+                transition: $transition-base;
+
+                &::before{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    content: "\f107";
+                    font-family: FontAwesome;
+                    font-size: 14px;
+                    line-height: 12px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: $transition-base;
+                    color: $white;
+                    text-align: center;
+                }
+            }
+        }
+        &:checked{
+            & + label{
+                & span{
+                    background-color: $primary;
+                    border-color: $primary;
+
+                    &::before{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+
+    & textarea{
+        padding-top: 15px;
+        height: 160px;
+        resize: none;
+    }
+
+    & .btn{}
+}
+
+// Custom Radio
+.radio{
+    & input[type="radio"]{
+        display: none;
+
+        & + label{
+            padding-left: 20px;
+            position: relative;
+            font-size: 14px;
+            line-height: 27px;
+
+            & span{
+                width: 13px;
+                height: 13px;
+                border-radius: 50%;
+                border: 1px solid $dark;
+                display: block;
+                position: absolute;
+                top: 6px;
+                left: 0;
+
+                &::before{
+                    position: absolute;
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    background-color: $dark;
+                    top: 0;
+                    left: 0;
+                    transform: scale(0);
+                    transition: all 0.3s linear;
+                }
+            }
+        }
+        &:checked{
+            & + label{
+                & span{
+                    &::before{
+                        transform: scale(0.7);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Single Select 2 
+.reviews-rating{
+    margin-top: 15px;
+
+    & label{
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: $headings-font-family;
+        color: #52565b;
+        margin-bottom: 0;
+    }
+    & .rating{
+        display: flex;
+        margin-top: 5px;
+        
+        & li{
+            font-size: 16px;
+            color: #d0d0d0;
+            margin: 0 2px;
+            cursor: pointer;
+
+            & i{
+                transition: $transition-base;
+
+                &.star,
+                &.hover{
+                    color: #ffba00;
+                }
+            }
+        }
+    }
+}
+
+
+// Single Select 2 
+.single-select2{
+    margin-top: 20px;
+
+    & span{
+        display: block;
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    & .form-select2{
+        & .select2{
+            width: 100% !important;            
+        }
+        & .select2-container--default {
+            & .select2-selection--single {
+                height: 50px;
+                border-color: #d7d7d7;
+                transition: all 0.3s linear;
+                border-radius: 0;
+                outline: none;
+
+                @media #{$large-mobile}{
+                    height: 40px;
+                }
+
+                & .select2-selection__rendered {
+                    width: 100%;
+                    line-height: 48px;
+                    border-radius: 0px;
+                    padding-left: 20px;
+                    padding-right: 28px;
+                    font-style: italic;
+                    font-size: 14px;
+                    color: #999999;
+
+
+                    @media #{$large-mobile}{
+                        line-height: 38px;
+                    }
+                }
+                & .select2-selection__arrow{
+                    height: 48px;
+                    width: 36px;
+                }
+            }
+            &.select2-container--open{
+                & .select2-selection--single {
+                    border-color: $primary;
+                }
+            }
+        }
+    }
+}
+
+.select2-container--default{
+    & .select2-results{
+        &  > .select2-results__options {
+            max-height: 200px;
+            overflow-y: auto;
+        } 
+    }   
+
+    & .select2-search--dropdown{
+        & .select2-search__field {
+            border-color: #ebebeb;
+
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+} 
+
+.select2-dropdown{
+    border-color: #ebebeb;
+}
+
+.select2-results__option {
+	font-size: 14px;
+}
+
+
+// Datepicker 
+.gj-picker {
+    border: 1px solid #eeecec;
+    padding: 10px;
+
+    & div[role="body"]{
+        
+    }
+    &  div[role="navigator"]{
+        & div:first-child, 
+        & div:last-child {
+            max-width: 42px;
+        }
+    }
+
+    & table{
+        & tr{
+            & td{
+                &.selected{
+                    &.gj-cursor-pointer{
+                        div {
+                            color: $white;
+                            background: $primary;
+                        }
+                    }
+                }
+                &.today{
+                    div {
+                        color: $primary;
+                    }
+                }
+            }
+            & td,
+            & th{
+                div {
+                    width: 35px;
+                    height: 35px;
+                    line-height: 35px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

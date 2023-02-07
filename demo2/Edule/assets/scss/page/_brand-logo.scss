@@ -1,0 +1,67 @@
+/*--
+/*  4.7 - Brand Logo CSS
+/*----------------------------------------*/
+
+// Brand Logo Wrapper 
+.brand-logo-wrapper{
+    background-color: $secondary;
+    padding: 60px 100px;
+    border-radius: 10px;
+    position: relative;
+
+    @media #{$tablet-device, $large-mobile}{
+        padding: 50px 50px;
+    }
+    @media #{$small-mobile}{
+        padding: 30px 30px;
+    }
+
+    & .shape-1{
+        position: absolute;
+        top: 60px;
+        right: 31%;
+
+        @media #{$large-mobile}{
+            display: none;
+        }
+    }
+    & .shape-2{
+        position: absolute;
+        top: 50px;
+        right: 45px;
+
+        @media #{$large-mobile}{
+            display: none;
+        }
+    }
+}
+
+// Brand Logo 
+.brand-logo{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+}
+
+// Single Brand
+.single-brand{
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

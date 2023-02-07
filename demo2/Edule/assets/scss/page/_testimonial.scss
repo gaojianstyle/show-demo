@@ -1,0 +1,171 @@
+/*--
+/*  4.6 - Testimonial CSS
+/*----------------------------------------*/
+
+// Testimonial Wrapper
+.testimonial-wrapper{
+    padding-top: 50px;
+}
+
+
+// Single Testimonial 
+.single-testimonial{
+    text-align: center;
+    border: 1px solid rgba($primary, 0.2);
+    border-radius: 10px;
+    padding: 45px 45px 40px;
+    position: relative;
+    overflow: hidden;
+
+    @media #{$small-mobile}{
+        padding: 30px 30px;
+    }
+
+    &::before{
+        position: absolute;
+        content: '';
+        background-image: url(../images/shape/shape-18.png);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 101px;
+        height: 172px;
+        right: 100px;
+        top: -27px;
+
+        @media #{$small-mobile}{
+            right: 50px;
+        }
+    }
+
+    & .testimonial-author{
+        & .author-thumb{
+            position: relative;
+
+            & img{
+                display: block;
+                width: 90px;
+                border: 1px solid rgba($primary, 0.2);
+                border-radius: 50%;
+                padding: 8px;
+                margin: 0 auto;
+            }
+            & i{
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                background-color: $primary;
+                color: $white;
+                font-size: 13px;
+                border-radius: 50%;
+                display: inline-block;
+                position: absolute;
+                bottom: -13px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+            }
+        }
+
+        & .rating-star{
+            position: relative;
+            display: inline-block;
+            margin-top: 35px;
+
+            &::before{
+                content: '\f000 \f000 \f000 \f000 \f000';
+                font-family: IcoFont;
+                color: #d0d0d0;
+                font-size: 14px;
+                letter-spacing: 2px;
+
+                @media #{$desktop-device}{
+                    font-size: 13px;
+                    letter-spacing: 1px;
+                }
+            }
+
+            & .rating-bar{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                overflow: hidden;
+                display: inline-block;
+
+                &::before{
+                    content: '\f000 \f000 \f000 \f000 \f000';
+                    font-family: IcoFont;
+                    color: #ffba00;
+                    font-size: 14px;
+                    letter-spacing: 2px;
+
+                    @media #{$desktop-device}{
+                        font-size: 13px;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+    & .testimonial-content{
+        padding-top: 15px;
+
+        & p{
+            font-size: 15px;
+            color: #52565b;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+        & .name{
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 0;
+            margin-top: 16px;
+        }
+        & .designation{
+            font-size: 14px;
+            font-weight: 400;
+            color: $primary;
+            margin-top: 5px;
+            display: block;
+        }
+    }
+}
+
+// Testimonial  Active
+.testimonial-active{
+    & .swiper-pagination{
+        position: relative;
+        bottom: 0;
+        margin-top: 43px;
+        height: 18px;
+
+        & .swiper-pagination-bullet{
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background-color: #d1e5d9;
+            opacity: 1;
+            margin: 0 7px;
+            transition: $transition-base;
+
+            &.swiper-pagination-bullet-active{
+                background-color: $primary;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

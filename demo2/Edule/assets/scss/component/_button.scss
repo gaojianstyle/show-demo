@@ -1,0 +1,107 @@
+/*--
+/*  2.1 - Button CSS
+/*----------------------------------------*/
+
+.btn {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+
+    @media #{$large-mobile}{
+        font-size: 14px;
+    }
+
+    &::before{
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        transition: 0.4s all linear;
+        transform: translate(-50%, -50%) scale(0);
+        border-radius: 50%;
+    }
+
+    & i{
+        margin-left: 8px;
+    }
+    
+    &:hover{
+        &::before{
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+}
+@each $name, $value in $theme-colors {  
+    .btn-#{$name} {
+
+        @if $name == light {
+            color: $dark;
+        } @else if $name == warning {
+            color: $dark;
+        } @else if $name == info {
+            color: $dark;
+        } @else if $name == secondary {
+            color: $primary;
+        } @else {
+            color: $white;
+        }
+
+        &:focus{
+            @if $name == light {
+                color: $dark;
+            } @else if $name == warning {
+                color: $dark;
+            } @else if $name == info {
+                color: $dark;
+            } @else if $name == secondary {
+                color: $primary;
+            } @else {
+                color: $white;
+            }
+        }
+    } 
+    .btn-hover-#{$name} {
+        &:hover {
+            border-color: $value;
+
+            &::before{
+                background-color: $value;
+            }            
+
+            @if $name == light {
+                color: $dark;
+            } @else if $name == warning {
+                color: $dark;
+            } @else {
+                color: $white;
+            }
+        }
+    }
+    .btn-outline-#{$name} {
+        border: 2px solid $value;
+        line-height: 61px;
+
+        @if $name == light {
+            color: $white;
+        } @else {
+            color: $dark;
+        }
+
+        &:hover {
+            background: $value;
+
+            @if $name == light {
+                color: $dark;
+            } @else if $name == warning {
+                color: $dark;
+            }@else if $name == info {
+                color: $dark;
+            } @else {
+                color: $white;
+            }
+        }
+    }
+}

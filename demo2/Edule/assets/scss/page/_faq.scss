@@ -1,0 +1,138 @@
+/*--
+/*  4.16 - FAQ CSS
+/*----------------------------------------*/
+
+// FAQ Tab Menu
+.faq-tab-menu{
+    background-color: $secondary;
+    padding: 25px 85px 40px;
+    border-radius: 10px;
+
+    @media #{$desktop-device, $tablet-device}{
+        padding: 25px 35px 40px;
+    }
+    @media #{$large-mobile}{
+        padding: 15px 30px 30px;
+    }
+    @media #{$small-mobile}{
+        padding: 15px 20px 30px;
+    }
+
+    & .nav{
+        @media #{$tablet-device}{
+            // flex-wrap: wrap;
+        }
+
+        & li{
+            padding: 15px 15px 0;
+
+            @media #{$small-mobile}{
+                padding: 15px 5px 0;
+            }
+
+            & button{
+                height: 60px;
+                line-height: 58px;
+                border: 1px solid rgba($primary, 0.2);
+                border-radius: 10px;
+                font-size: 15px;
+                font-weight: 500;
+                color: $dark;
+                background-color: $white;
+                transition: $transition-base;
+                padding: 0;
+                padding: 0 20px;
+                white-space: nowrap;
+
+                @media #{$tablet-device}{
+                    width: 170px !important;
+                }
+
+                @media #{$small-mobile}{
+                    font-size: 13px;
+                    height: 50px;
+                    line-height: 48px;
+                    padding: 0 12px;
+                }
+
+                &.active,
+                &:hover{
+                    border-color: $primary;
+                    color: $primary;
+                }
+            }
+        }
+
+        &.nav-justified{
+            & .nav-item,
+            & .nav-link{
+                @media #{$tablet-device, $large-mobile}{
+                    flex-grow: 0;
+                }
+            }
+        }
+    }
+}
+
+
+// FAQ Wrapper 
+.faq-wrapper{
+    padding-top: 30px;
+}
+
+
+// Single FAQ Item 
+.single-faq-item{
+    border: 1px solid rgba($primary, 0.2);
+    padding: 10px 70px 35px;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: $transition-base;
+
+    @media #{$large-mobile}{
+        padding: 1px 45px 30px;
+    }
+    @media #{$small-mobile}{
+        padding: 1px 30px 30px;
+    }
+
+    & .faq-title{
+        max-width: 330px;
+        margin-top: 25px;
+
+        & .title{
+            font-size: 20px;
+            font-weight: 500;
+            color: $dark;
+            line-height: 1.5;
+            transition: $transition-base;
+
+            @media #{$small-mobile}{
+                font-size: 18px;
+            }
+        }
+    }
+    & .faq-text{
+        margin-top: 25px;
+    }
+
+    &:hover{
+        background-color: $secondary;
+        border-color: $secondary;
+
+        & .faq-title{    
+            & .title{                
+                color: $primary;
+            }
+        }
+    }
+}
+
+
+// FAQ Button
+.faq-btn{
+    margin-top: 50px;
+}
+
+
+

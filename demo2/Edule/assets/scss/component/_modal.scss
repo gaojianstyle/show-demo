@@ -1,0 +1,42 @@
+/*--
+/*  2.4 - Modal CSS
+/*----------------------------------------*/
+
+
+// Modal
+.modal{
+    & .modal-dialog{
+        max-width: 900px;
+
+        @media #{$tablet-device}{
+            max-width: 660px;
+        }
+        @media #{$large-mobile}{
+            max-width: 540px;
+        }
+        @media #{$small-mobile}{
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        & .modal-content{
+            & .modal-header{
+                padding: 12px 16px;
+
+                & .modal-title{
+                    font-size: 22px;
+                    font-weight: 500;
+                    color: $dark;
+                    font-family: $headings-font-family;
+                    margin-bottom: 0;
+                }
+            }
+
+            & .reviews-form{
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+

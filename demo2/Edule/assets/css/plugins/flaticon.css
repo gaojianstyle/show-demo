@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("../../fonts/flaticon.ttf?655915d50ed0facf464660ba648373b0") format("truetype"),
+url("../../fonts/flaticon.woff?655915d50ed0facf464660ba648373b0") format("woff"),
+url("../../fonts/flaticon.woff2?655915d50ed0facf464660ba648373b0") format("woff2"),
+url("../../fonts/flaticon.eot?655915d50ed0facf464660ba648373b0#iefix") format("embedded-opentype"),
+url("../../fonts/flaticon.svg?655915d50ed0facf464660ba648373b0#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-badge:before {
+    content: "\f101";
+}
+.flaticon-coding:before {
+    content: "\f102";
+}
+.flaticon-email:before {
+    content: "\f103";
+}
+.flaticon-facebook:before {
+    content: "\f104";
+}
+.flaticon-form:before {
+    content: "\f105";
+}
+.flaticon-forms:before {
+    content: "\f106";
+}
+.flaticon-increase:before {
+    content: "\f107";
+}
+.flaticon-instagram:before {
+    content: "\f108";
+}
+.flaticon-left:before {
+    content: "\f109";
+}
+.flaticon-linkedin:before {
+    content: "\f10a";
+}
+.flaticon-loupe:before {
+    content: "\f10b";
+}
+.flaticon-magnifying-glass:before {
+    content: "\f10c";
+}
+.flaticon-notification:before {
+    content: "\f10d";
+}
+.flaticon-open-book:before {
+    content: "\f10e";
+}
+.flaticon-phone-call:before {
+    content: "\f10f";
+}
+.flaticon-pin:before {
+    content: "\f110";
+}
+.flaticon-play:before {
+    content: "\f111";
+}
+.flaticon-right:before {
+    content: "\f112";
+}
+.flaticon-skype:before {
+    content: "\f113";
+}
+.flaticon-star:before {
+    content: "\f114";
+}
+.flaticon-transparency:before {
+    content: "\f115";
+}
+.flaticon-tutor:before {
+    content: "\f116";
+}
+.flaticon-twitter:before {
+    content: "\f117";
+}
+.flaticon-waving-flag:before {
+    content: "\f118";
+}

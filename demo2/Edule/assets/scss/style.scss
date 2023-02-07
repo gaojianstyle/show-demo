@@ -1,0 +1,61 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Edule - eLearning Website Template
+    Author: codecarnival
+    Author URL: https://themeforest.net/user/codecarnival
+    Support: https://hasthemes.com/contact-us/
+    Description: Creative  HTML5 template.
+    Version: 1.0
+    
+-----------------------------------------------------------------------------------
+    
+    CSS INDEX
+    ===================
+	
+    01. Template default CSS
+    02. Component CSS
+        2.1 - Button CSS
+        2.2 - Blockquote CSS
+        2.3 - Form CSS
+        2.4 - Modal CSS
+    03. Header CSS
+        3.1 - Header Top CSS
+        3.2 - Header Main CSS
+        3.3 - Mobile Menu CSS
+        3.4 - Login Header CSS
+    04. Page CSS
+        4.1 - Slider CSS
+        4.2 - Courses CSS
+        4.3 - Call to Action CSS
+        4.4 - How It Work CSS
+        4.5 - Download App CSS
+        4.6 - Testimonial CSS
+        4.7 - Brand Logo CSS
+        4.8 - Blog CSS
+        4.9 - Page Banner CSS
+        4.11 - About CSS
+        4.12 - Team CSS
+        4.13 - Courses Details CSS
+        4.14 - Blog Details CSS
+        4.15 - Registration & Login Form CSS
+        4.16 - FAQ CSS
+        4.17 - 404 Error CSS
+        4.18 - Contact CSS
+        4.19 - Courses Enroll CSS
+        4.20 - Courses Admin CSS
+    05. Widget CSS
+        5.1 - Footer Widget CSS
+        5.2 - Sidebar Widget CSS
+    06. Footer CSS
+
+-----------------------------------------------------------------------------------*/
+@import "./bootstrap/functions";
+@import "variables";
+@import "./bootstrap/bootstrap";
+
+@import "common";
+@import "component";
+@import "header";
+@import "page";
+@import "widget";
+@import "footer";

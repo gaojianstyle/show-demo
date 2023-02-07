@@ -1,0 +1,290 @@
+/*--
+/*  4.18 - Contact CSS
+/*----------------------------------------*/
+
+
+// Contact Map Wrapper 
+.contact-map-wrapper{
+    & iframe{
+        display: block;
+        width: 100%;
+        height: 500px;
+        border-radius: 10px;
+
+        @media #{$small-mobile}{
+            height: 300px;
+        }
+    }
+}
+
+
+
+// Contact Wrapper
+.contact-wrapper{
+    padding: 70px;
+    padding-top: 20px;
+    border: 1px solid rgba($primary, 0.2);
+    border-radius: 10px;
+
+    @media #{$desktop-device, $large-mobile}{
+        padding: 40px;
+        padding-top: 0;
+    }  
+    @media #{$small-mobile}{
+        padding: 30px;
+        padding-top: 0;
+    }
+}
+
+// Contact Info
+.contact-info{
+    background-color: $secondary;
+    padding: 70px 60px;
+    border-radius: 15px;
+    margin-top: 50px;
+    position: relative;
+    
+    @media #{$desktop-device}{
+        padding: 50px 30px;        
+    }
+    @media #{$large-mobile}{
+        padding: 40px 30px;
+    }
+    @media #{$small-mobile}{
+        margin-top: 30px;
+        padding: 30px 20px;
+    }
+
+    & .shape{
+        position: absolute;
+        top: 50px;
+        right: 50px;
+
+        @media #{$small-mobile}{
+            top: 25px;
+            right: 25px;
+        }
+    }
+}
+
+// Single Contact Info
+.single-contact-info{
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+
+    @media #{$small-mobile}{
+        display: block;
+        text-align: center;
+    }
+
+    & + .single-contact-info{
+        border-top: 1px solid rgba($primary, 0.2);
+    }
+
+    & .info-icon{
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba($primary, 0.2);
+        border-radius: 50%;
+
+        @media #{$desktop-device}{
+            width: 80px;
+            height: 80px;
+        }
+        @media #{$small-mobile}{
+            margin: 0 auto;
+        }
+        
+        & i{
+            width: 70px;
+            height: 70px;
+            line-height: 78px;
+            background-color: $white;
+            border: 1px solid rgba($primary, 0.2);
+            border-radius: 50%;
+            font-size: 30px;
+            color: $primary;
+            text-align: center;
+            transition: $transition-base;
+
+            @media #{$desktop-device}{
+                width: 60px;
+                height: 60px;
+                line-height: 68px;
+                font-size: 24px;
+            }
+        }
+    }
+    & .info-content{
+        flex: 1;
+        padding-left: 30px;
+
+        @media #{$desktop-device}{
+            padding-left: 20px;
+        }
+        @media #{$small-mobile}{
+            padding-left: 0;
+            padding-top: 20px;
+        }
+
+        & .title{
+            font-size: 14px;
+            font-weight: 400;
+            color: $primary;
+            margin-bottom: 0;
+        }
+        & p{
+            font-size: 22px;
+            font-weight: 500;
+            color: $dark;
+            margin-bottom: 0;
+            margin-top: 15px;
+
+            @media #{$desktop-device}{
+                font-size: 18px;
+            }
+            @media #{$small-mobile}{
+                font-size: 16px;
+            }
+        }
+    }
+
+    &:hover{
+        & .info-icon{            
+            & i{                
+                background-color: $primary;
+                border-color: $primary;
+                color: $white;
+            }
+        }
+    }
+}
+
+// Contact Form
+.contact-form{
+    max-width: 400px;
+    margin-left: auto;
+    margin-top: 45px;
+
+    @media #{$small-mobile}{
+        margin-top: 5px;
+    }
+
+    @media #{$tablet-device, $large-mobile}{
+        max-width: 100%;
+    }
+    @media #{$small-mobile}{
+        margin-top: 30px;
+    }
+
+    & .title{
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 0;
+        line-height: 1.4;
+        padding-bottom: 10px;
+
+        @media #{$large-mobile}{
+            font-size: 24px;
+        }
+        @media #{$small-mobile}{
+            font-size: 20px;
+        }
+
+        & span{
+            color: $primary;
+            position: relative;
+
+            &::before{
+                position: absolute;
+                content: '';
+                background-image: url(../images/shape/shape-4.png);
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 121px;
+                height: 13px;
+                left: 50%;
+                bottom: -10px;
+                transform: translateX(-50%);
+                
+                @media #{$small-mobile}{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    & .form-wrapper{
+        padding-top: 30px;
+
+        @media #{$small-mobile}{
+            padding-top: 10px;
+        }
+    }
+
+    & .single-form{
+        & .btn{
+            margin-top: 20px;
+            transition: $transition-base;
+
+            &::before{
+                width: 600px;
+                height: 600px;
+            }
+
+            &.btn-outline{
+                border: 1px solid rgba($primary, 0.2);
+                line-height: 58px;
+                
+                &:hover{
+                    background-color: $primary;
+                    border-color: $primary;
+                    color: $white;
+                }
+            }
+
+            & i{
+                display: inline-block;
+                font-size: 30px;
+                position: relative;
+                line-height: 1;
+                top: 7px;
+                padding-left: 30px;
+            }
+        }
+    }
+}
+
+// Form Message 
+.form-message{
+    margin-bottom: 0;
+
+    &.error,
+    &.success {
+        font-size:16px;
+        font-weight: 500;
+        color: $dark;
+        background:#ddd;
+        padding:10px 15px;
+        margin-top: 15px;
+    }
+    &.error {
+        color:#ff0000
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

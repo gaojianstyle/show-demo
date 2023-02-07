@@ -1,0 +1,529 @@
+/*--
+/*  4.13 - Courses Details CSS
+/*----------------------------------------*/
+
+
+// Courses Details
+.courses-details{
+    margin-top: 50px;
+    
+    & .courses-details-images{
+        overflow: hidden;
+        border-radius: 10px;
+        position: relative;
+
+        & img{
+            border-radius: 10px;
+            width: 100%;
+        }
+        & .tags{
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background-color: #ffba00;
+            font-size: 14px;
+            font-family: $headings-font-family;
+            font-weight: 400;
+            padding: 0 25px;
+            border-radius: 5px;
+            height: 35px;
+            line-height: 35px;
+            display: inline-block;
+            color: $white;
+        }
+        & .courses-play{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @media #{$small-mobile}{
+                width: 70px;
+            }
+
+            & img{}
+            & .play{
+                position: absolute;
+                top: 52%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 24px;
+                color: $white;
+
+                @media #{$small-mobile}{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    & .title{
+        font-size: 25px;
+        font-weight: 500;
+        color: $dark;
+        line-height: 1.5;
+        margin-top: 30px;
+        margin-bottom: 0;
+
+        @media #{$small-mobile}{
+            font-size: 18px;
+        }
+    }
+
+    & .courses-details-admin{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 10px;
+
+        @media #{$large-mobile}{
+            display: block;
+        }
+
+        & .admin-author{
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+
+            @media #{$small-mobile}{
+                flex-wrap: wrap;
+            }
+
+            & .author-thumb{
+                & img{
+                    width: 50px;
+                    border-radius: 50%;
+                }
+            }
+            & .author-content{
+                flex: 1;
+                padding-left: 15px;
+                padding-bottom: 5px;
+
+                @media #{$small-mobile}{
+                    flex-wrap: wrap;
+                }
+
+                & .name{
+                    font-size: 17px;
+                    font-weight: 500;
+                    color: $dark;
+                    display: inline-block;
+                    line-height: 22px;
+                    position: relative;
+
+                    &::after{
+                        content: '||';
+                        font-size: 24px;
+                        font-weight: 300;
+                        color: #c5c5c5;
+                        position: relative;
+                        margin: 0 18px;
+                        bottom: -2px;
+                    }
+                }
+                & .Enroll{
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: $primary;
+                    display: inline-block;
+                    line-height: 22px;
+                }
+            }
+        }
+        & .admin-rating{
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+
+            @media #{$large-mobile}{
+                margin-left: 65px;
+            }
+
+            & .rating-count{
+                font-size: 15px;
+                font-weight: 500;
+                color: $dark;
+                margin-right: 2px;
+
+                @media #{$desktop-device, $tablet-device}{
+                    font-size: 13px;
+                }
+            }
+            & .rating-star{
+                position: relative;
+                margin: 0 8px;
+
+                &::before{
+                    content: '\f000 \f000 \f000 \f000 \f000';
+                    font-family: IcoFont;
+                    color: #d0d0d0;
+                    font-size: 14px;
+                    letter-spacing: 2px;
+
+                    @media #{$desktop-device}{
+                        font-size: 13px;
+                        letter-spacing: 1px;
+                    }
+                }
+
+                & .rating-bar{
+                    position: absolute;
+                    top: -2px;
+                    left: 0;
+                    height: 100%;
+                    overflow: hidden;
+
+                    &::before{
+                        content: '\f000 \f000 \f000 \f000 \f000';
+                        font-family: IcoFont;
+                        color: #ffba00;
+                        font-size: 14px;
+                        letter-spacing: 2px;
+
+                        @media #{$desktop-device}{
+                            font-size: 13px;
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+            }
+            & .rating-text{
+                font-size: 14px;
+                font-weight: 400;
+                color: #52565b;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// Courses Details Tab
+.courses-details-tab{
+    padding-top: 30px;
+
+    // Details Tab Menu
+    & .details-tab-menu{
+        background-color: $secondary;
+        border-radius: 10px;
+        padding: 15px;
+        padding-top: 5px;
+
+        & .nav{
+            & li{
+                padding: 10px 10px 0;
+
+                & button{
+                    width: 130px;
+                    height: 45px;
+                    line-height: 41px;
+                    text-align: center;
+                    border: 1px solid rgba($primary, 0.2);
+                    border-radius: 5px;
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: $dark;
+                    background-color: $white;
+                    transition: $transition-base;
+
+                    &:hover,
+                    &.active{
+                        background-color: $primary;
+                        border-color: $primary;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    // Details Tab Content
+    & .details-tab-content{
+        & .tab-title{
+            font-size: 25px;
+            font-weight: 500;
+            color: $dark;
+            margin-bottom: 0;
+        }
+        p{
+            margin-bottom: 0;
+            margin-top: 15px;
+            color: #52565b;
+            font-size: 15px;
+            font-weight: 400;
+        }
+        & .tab-description{
+            & .description-wrapper{
+                margin-top: 25px;
+            }
+        }
+        & .tab-instructors{
+            margin-top: 25px;
+
+            & .single-team{
+                margin-top: 35px;
+            }
+        }
+        & .tab-rating-content{
+            margin-top: 45px;
+        }
+        & .tab-rating-box{
+            margin-top: 45px;
+            text-align: center;
+            border: 1px solid rgba($primary, 0.2);
+            border-radius: 10px;
+            padding: 40px 30px;
+
+            & .count{
+                font-size: 30px;
+                font-weight: 500;
+                color: $primary;
+                line-height: 1;
+
+                & i{
+                    font-size: 14px;
+                    color: #ffa200;
+                }
+            }
+            & p{
+                margin-top: 0;
+            }
+
+            & .rating-box-wrapper{
+                padding-top: 20px;
+            }
+
+            & .single-rating{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 6px;
+
+                & .rating-star{
+                    position: relative;
+
+                    &::before{
+                        content: '\f000 \f000 \f000 \f000 \f000';
+                        font-family: IcoFont;
+                        color: #d0d0d0;
+                        font-size: 14px;
+                        letter-spacing: 2px;
+    
+                        @media #{$desktop-device}{
+                            font-size: 13px;
+                            letter-spacing: 1px;
+                        }
+                    }
+    
+                    & .rating-bar{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        overflow: hidden;
+    
+                        &::before{
+                            content: '\f000 \f000 \f000 \f000 \f000';
+                            font-family: IcoFont;
+                            color: #ffba00;
+                            font-size: 14px;
+                            letter-spacing: 2px;
+    
+                            @media #{$desktop-device}{
+                                font-size: 13px;
+                                letter-spacing: 1px;
+                            }
+                        }
+                    }
+                }
+                & .rating-progress-bar{
+                    width: calc(100% - 95px);
+                    height: 5px;
+                    background-color: #d3ded7;
+                    border-radius: 5px;
+                    overflow: hidden;
+
+                    & .rating-line{
+                        height: 100%;
+                        background-color: $primary;
+                    }
+                }
+            }            
+        }
+        
+        & .tab-reviews{
+            margin-top: 25px;
+
+            & .reviews-wrapper{
+                margin-top: 30px;
+            }
+            & .single-review{
+                border: 1px solid rgba($primary, 0.2);
+                border-radius: 10px;
+                padding: 30px;
+                position: relative;
+                overflow: hidden;
+
+                &::before{
+                    position: absolute;
+                    content: '';
+                    background-image: url(../images/shape/shape-18.png);
+                    background-position: center center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    width: 101px;
+                    height: 172px;
+                    right: 100px;
+                    top: -50px;
+            
+                    @media #{$small-mobile}{
+                        right: 50px;
+                    }
+                }
+
+                & .review-author{
+                    display: flex;
+                    align-items: center;
+
+                    @media #{$small-mobile}{
+                        display: block;
+                    }
+
+                    & .author-thumb{
+                        position: relative;
+                        display: inline-block;
+
+                        & img{
+                            display: block;
+                            width: 90px;
+                            border: 1px solid rgba($primary, 0.2);
+                            border-radius: 50%;
+                            padding: 8px;
+                        }
+                        & i{
+                            width: 35px;
+                            height: 35px;
+                            line-height: 35px;
+                            text-align: center;
+                            background-color: $primary;
+                            color: $white;
+                            font-size: 13px;
+                            border-radius: 50%;
+                            display: inline-block;
+                            position: absolute;
+                            bottom: -13px;
+                            left: 0;
+                            right: 0;
+                            margin: 0 auto;
+                        }
+                    }
+                    & .author-content{
+                        flex: 1;
+                        padding-left: 30px;
+
+                        @media #{$small-mobile}{
+                            padding-left: 0;
+                            padding-top: 20px;
+                        }
+
+                        & .name{
+                            font-size: 22px;
+                            font-weight: 500;
+                            margin-bottom: 0;
+                        }
+                        & .designation{
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: $primary;
+                            margin-top: 5px;
+                            display: block;
+                        }
+
+                        & .rating-star{
+                            position: relative;
+                            margin-top: 5px;
+                            display: inline-block;
+        
+                            &::before{
+                                content: '\f000 \f000 \f000 \f000 \f000';
+                                font-family: IcoFont;
+                                color: #d0d0d0;
+                                font-size: 14px;
+                                letter-spacing: 2px;
+            
+                                @media #{$desktop-device}{
+                                    font-size: 13px;
+                                    letter-spacing: 1px;
+                                }
+                            }
+            
+                            & .rating-bar{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                height: 100%;
+                                overflow: hidden;
+                                display: inline-block;
+            
+                                &::before{
+                                    content: '\f000 \f000 \f000 \f000 \f000';
+                                    font-family: IcoFont;
+                                    color: #ffba00;
+                                    font-size: 14px;
+                                    letter-spacing: 2px;
+            
+                                    @media #{$desktop-device}{
+                                        font-size: 13px;
+                                        letter-spacing: 1px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                & p{
+                    margin-top: 30px;
+                    margin-bottom: 0;
+                    font-size: 15px;
+                    font-weight: 400;
+                    color: #52565b;
+                }
+            }
+
+            & .reviews-btn{
+                padding-top: 30px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+// Reviews Active 
+.reviews-active{
+    & .swiper-pagination{
+        position: relative;
+        bottom: 0;
+        margin-top: 22px;
+
+        & .swiper-pagination-bullet{
+            background-color: #d1e5d9;
+            opacity: 1;
+            width: 12px;
+            height: 12px;
+
+            &.swiper-pagination-bullet-active{
+                background-color: $primary;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+

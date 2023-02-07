@@ -1,0 +1,174 @@
+/*--
+/*  5.1 - Footer Widget CSS
+/*----------------------------------------*/
+
+// Footer Widget Section 
+.footer-widget-section{
+    padding-top: 30px;
+    padding-bottom: 80px;
+    position: relative;
+    z-index: 1;
+
+    @media #{$large-mobile}{
+        padding-top: 10px;
+        padding-bottom: 60px;
+    }
+
+    & .shape-1{
+        position: absolute;
+        top: 80px;
+        left: 5%;
+        z-index: -1;
+
+        @media #{$tablet-device, $large-mobile}{
+            display: none;
+        }
+    }
+    & .shape-2{
+        position: absolute;
+        right: 3%;
+        bottom: 95px;
+        z-index: -1;
+    }
+}
+
+// Footer Widget Title
+.footer-widget-title{
+    color: $dark;
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 0px;
+}
+
+// Footer Widget 
+.footer-widget{
+    margin-top: 50px;
+    
+    & .widget-logo{
+        & a{}
+    }
+    & .widget-address{
+        margin-top: 27px;
+
+        & p{
+            font-size: 15px;
+            font-weight: 400;
+            color: $primary;
+            margin-top: 6px;
+        }
+    }
+
+    & .widget-info{
+        padding-top: 25px;
+
+        & li{
+            & p{
+                font-size: 15px;
+                color: $dark;
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 0;
+
+                & i{
+                    font-size: 20px;
+                    color: $primary;
+                }
+                & a{
+                    margin-top: 3px;
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+
+    & .widget-social{
+        display: flex;
+        padding-top: 20px;
+
+        & li{
+            margin-right: 20px;
+
+            &:last-child{
+                margin-right: 0;
+            }
+
+            & a{
+                font-size: 20px;
+                color: $dark;
+
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    & .widget-link{
+        padding-top: 26px;
+
+        & li{
+            margin-top: 12px;
+
+            & a{
+                color: $dark;
+                transition: $transition-base;
+                font-size: 15px;
+                font-weight: 400;
+
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+    }   
+    
+    & .widget-subscribe{
+        padding-top: 36px;
+
+        & p{
+            color: $dark;
+            font-size: 15px;
+        }
+        & .widget-form{
+            & input{
+                width: 100%;
+                height: 55px;
+                padding: 0 30px;
+                border: 1px solid rgba($primary, 0.2);
+                border-radius: 10px;
+                background-color: $white;
+                color: $dark;
+                font-size: 15px;
+                font-weight: 500;
+                outline: none;
+
+                @include placeholder{
+                    opacity: 1;
+                    color: $dark;
+                }
+            }
+            & .btn{
+                margin-top: 20px;
+                height: 55px;
+                line-height: 55px;
+                padding: 0 30px;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+
+// Footer Widget Link 
+.footer-widget-link{
+    display: flex;
+    flex-wrap: wrap; 
+
+    & .footer-widget{
+        width: 50%;
+        @media #{$small-mobile}{
+            width: 100%;
+        }
+    }
+}
+

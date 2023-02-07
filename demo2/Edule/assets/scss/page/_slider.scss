@@ -1,0 +1,372 @@
+/*--
+/*  4.1 - Slider CSS
+/*----------------------------------------*/
+
+// Slider Section 
+.slider-section{
+    background-color: #eefbf3;
+    height: 940px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    padding-top: 188px;
+    display: flex;
+    align-items: center;
+
+    @media #{$laptop-device}{
+        height: 880px;
+    }
+    @media #{$desktop-device}{
+        height: 840px;
+    }
+    @media #{$tablet-device, $large-mobile}{
+        height: auto;
+        padding-top: 200px;
+        display: block;
+    }
+
+    & .slider-shape{
+        position: absolute;
+        left: 120px;
+        top: 195px;
+
+        @media #{$laptop-device, $desktop-device}{
+            left: 50px;
+        }
+        @media #{$tablet-device, $large-mobile}{
+            display: none;
+        }
+
+        & .shape-1{}
+    }
+}
+
+// Slider Images 
+.slider-images{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 56%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+
+    @media #{$desktop-device}{
+        width: 55%;
+    }
+
+    @media #{$tablet-device, $large-mobile}{
+        position: relative;
+        width: 55%;
+        margin-left: auto;
+    }
+}
+
+
+// Slider Content 
+.slider-content{
+    max-width: 410px;
+
+    & .sub-title{
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 0;
+        color: $primary;
+
+        @media #{$desktop-device, $tablet-device, $large-mobile}{
+            font-size: 16px;
+        }
+
+        @media #{$small-mobile}{
+            font-size: 14px;
+        }
+    }
+    & .main-title{
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 1.3;
+        margin-bottom: 0;
+        margin-top: 25px;
+
+        @media #{$small-mobile}{
+            font-size: 24px;
+        }
+
+        & span{
+            color: $primary;
+            position: relative;
+
+            &::before{
+                position: absolute;
+                content: '';
+                background-image: url(../images/shape/shape-4.png);
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 214px;
+                height: 21px;
+                left: 50%;
+                bottom: -26px;
+                transform: translateX(-50%);
+
+                @media #{$small-mobile}{
+                    display: none;
+                }
+            }
+        }
+    }
+    & p{
+        font-size: 18px;
+        margin-top: 55px;
+        margin-bottom: 0;
+
+        @media #{$small-mobile}{
+            margin-top: 35px;
+        }
+    }
+    & .btn{
+        margin-top: 28px;
+    }
+}
+
+
+// Slider Courses Box 
+.slider-courses-box{
+    position: absolute;
+    top: 38%;
+    left: 50%;
+
+    @media #{$tablet-device}{
+        top: 57%;
+        left: 45%;
+    }
+    @media #{$large-mobile}{
+        top: 63%;
+        left: 50%;
+    }
+    @media #{$small-mobile}{
+        left: 62%;
+    }
+
+    & .shape-1{
+        position: absolute;
+        top: -15px;
+        right: -130px;
+
+        @media #{$large-mobile}{
+            right: -100px;
+        }
+        @media #{$small-mobile}{
+            display: none;
+        }
+    }
+    & .shape-2{
+        @media #{$large-mobile}{
+            width: 140px;
+        }
+        @media #{$small-mobile}{
+            width: 100px;
+        }
+    }
+
+    & .box-content{
+        width: 140px;
+        height: 140px;
+        text-align: center;
+        background-color: $primary;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+        @media #{$large-mobile}{
+            width: 100px;
+            height: 100px;
+        }
+        @media #{$small-mobile}{
+            width: 80px;
+            height: 80px;
+        }
+
+        & i{
+            font-size: 30px;
+            color: $white;
+            display: block;
+            line-height: 1;
+
+            @media #{$large-mobile}{
+                font-size: 20px;
+            }
+            @media #{$small-mobile}{
+                font-size: 16px;
+            }
+        }
+        & .count{
+            font-weight: 700;
+            font-size: 28px;
+            color: $white;
+            display: block;
+            line-height: 1.1;
+
+            @media #{$large-mobile}{
+                font-size: 22px;
+            }
+            @media #{$small-mobile}{
+                font-size: 16px;
+            }
+        }
+        & p{
+            font-weight: 400;
+            font-size: 17px;
+            color: $white;
+
+            @media #{$large-mobile}{
+                font-size: 14px;
+            }
+            @media #{$small-mobile}{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+// Slider Rating Box 
+.slider-rating-box{
+    position: absolute;
+    top: 24%;
+    right: 115px;
+
+    @media #{$laptop-device, $desktop-device}{
+        right: 15px;
+        top: 20%;
+    }
+
+    @media #{$tablet-device, $large-mobile}{
+        top: 18%;
+        right: 15px;
+    }
+    @media #{$small-mobile}{
+        right: 15px;
+    }
+
+    & .box-rating{
+        width: 140px;
+        height: 140px;
+        text-align: center;
+        background-color: $white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+        @media #{$large-mobile}{
+            width: 100px;
+            height: 100px;
+        }
+        @media #{$small-mobile}{
+            width: 80px;
+            height: 80px;
+        }
+
+        & .count{
+            font-size: 30px;
+            font-weight: 500;
+            color: $primary;
+
+            @media #{$large-mobile}{
+                font-size: 24px;
+            }
+            @media #{$small-mobile}{
+                font-size: 18px;
+            }
+
+            & i{
+                color: #ffa200;
+                font-size: 14px;
+                display: inline-block;
+
+                @media #{$small-mobile}{
+                    font-size: 12px;
+                }
+            }
+        }
+        & p{
+            color: #52565b;
+            margin-bottom: 0;
+            font-size: 14px;
+
+            @media #{$large-mobile}{
+                font-size: 12px;
+            }
+            @media #{$small-mobile}{
+                font-size: 10px;
+            }
+        }
+    }
+
+    & .shape{
+        margin-top: 45px;
+        padding-right: 30px;
+
+        @media #{$large-mobile}{
+            width: 120px;
+            margin-top: 30px;
+        }
+        @media #{$small-mobile}{
+            display: none;
+        }
+    }
+}
+
+// Slider Video
+.slider-video{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    @media #{$laptop-device, $desktop-device}{
+        display: none;
+    }
+
+    @media #{$tablet-device, $large-mobile}{
+        width: 45%;
+    }
+
+    & .shape-1{}
+
+    & .video-play{
+        position: absolute;
+        top: 53%;
+        left: 38%;
+        transform: translateX(-50%) translateY(-50%);
+
+        @media #{$laptop-device, $large-mobile}{
+            width: 100px;
+        }
+
+        @media #{$small-mobile}{
+            width: 80px;
+        }
+
+        & .play{
+            font-size: 30px;
+            color: #ffa200;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            display: inline-block;
+
+            @media #{$large-mobile}{
+                font-size: 24px;
+            }
+            @media #{$small-mobile}{
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+

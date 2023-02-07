@@ -1,0 +1,128 @@
+/*--
+/*  4.4 - How It Work CSS
+/*----------------------------------------*/
+
+// How It Work Wrapper 
+.how-it-work-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+
+    @media #{$large-mobile}{
+        display: block;
+    }
+
+    & .work-arrow{
+        margin-top: 30px;
+    }
+}
+
+// Single Work 
+.single-work{
+    max-width: 300px;
+    border-radius: 10px;
+    background-color: $secondary;
+    padding: 38px;
+    padding-bottom: 35px;
+    margin-top: 30px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    @media #{$tablet-device}{
+        padding: 20px;
+    }
+    @media #{$large-mobile}{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    & .shape-1{
+        position: absolute;
+        left: -17px;
+        top: 0;
+        z-index: -1;
+    }
+    & .shape-2{
+        position: absolute;
+        top: -7px;
+        right: -34px;
+        z-index: -1;
+    }
+    & .shape-3{
+        position: absolute;
+        bottom: -25px;
+        right: -10px;
+        z-index: -1;
+    }
+
+    & .work-icon{
+        & i{
+            width: 65px;
+            height: 65px;
+            line-height: 68px;
+            text-align: center;
+            border: 1px solid rgba($primary, 0.2);
+            border-radius: 10px;
+            background-color: $white;
+            color: $primary;
+            display: inline-block;
+            font-size: 32px;
+            transition: $transition-base;
+
+            @media #{$tablet-device}{
+                width: 45px;
+                height: 45px;
+                line-height: 48px;
+                font-size: 22px;
+            }
+        }
+    }
+    & .work-content{
+        padding-top: 33px;
+
+        & .title{
+            font-size: 25px;
+            font-weight: 500;
+            color: $dark;
+            margin-bottom: 0;
+
+            @media #{$desktop-device}{
+                font-size: 22px;
+            }
+            @media #{$tablet-device}{
+                font-size: 20px;
+            }
+        }
+        & p{
+            font-size: 14px;
+            color: #696969;
+            margin-bottom: 0;
+            margin-top: 15px;
+        }
+    }
+
+    &:hover{
+        & .work-icon{
+            & i{
+                border-color: $primary;
+                background-color: $primary;
+                color: $white;
+            }
+        }
+    }
+}
+
+// Work Arrow
+.work-arrow{
+    @media #{$large-mobile}{
+        display: none;
+    }
+    & .arrow{}
+}
+
+
+
+
+

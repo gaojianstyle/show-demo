@@ -1,0 +1,362 @@
+//=======================
+// Developer Variable
+//=======================
+
+// scss-docs-start social-colors-map
+$social-colors: (
+	"android": #7AC157,
+	"apple": #B8B8B8,
+	"behance": #1869FF,
+	"codepen": #000000,
+	"dribbble": #EA4C8A,
+	"dropbox": #007EE5,
+	"evernote": #78D525,
+	"facebook": #4867AA,
+	"github": #313131,
+	"googleDrive": #1DA462,
+	"googleEarth": #4285F4,
+	"googleGlass": #EA4335,
+	"googleMaps": #5083C3,
+	"googlePlay": #01B9FD,
+	"googlePlus": #DD5144,
+	"google": #4285F4,
+	"instagram": #B23A94,
+	"css3": #0277BD,
+	"html5": #E44D26,
+	"javascript": #F9DC3D,
+	"python": #0C9DBF,
+	"lastfm": #E31B23,
+	"linkedin": #007BB6,
+	"paypal": #002F86,
+	"pinterest": #BD081B,
+	"pocket": #EF3E56,
+	"polymer": #F87292,
+	"rss": #F99C3A,
+	"share": #2C9CFF,
+	"stackoverflow": #F38024,
+	"steam": #15497B,
+	"twitter": #1DA1F2,
+	"vk": #5181B8,
+	"wikipedia": #E9E9E9,
+	"windows": #0078D6,
+	"s500px": #000000,
+	"s8tracks": #122D4B,
+	"amazon": #F79B34,
+	"blogger": #F06A35,
+	"delicious": #0000FE,
+	"disqus": #2E9EFE,
+	"flattr": #7AB831,
+	"flickr": #FE0084,
+	"odnoklassniki": #F58220,
+	"outlook": #0072C6,
+	"playstation": #07418E,
+	"reddit": #FF4500,
+	"skype": #00A9F0,
+	"slideshare": #0077B5,
+	"soundcloud": #FE4900,
+	"tumblr": #36465D,
+	"twitch": #6441A4,
+	"vimeo": #1AB7EA,
+	"whatsapp": #189D0E,
+	"xbox": #107C0F,
+	"yahoo": #4101AF,
+	"youtube": #FE0000,
+);
+// scss-docs-end theme-colors-map
+
+// Responsive Variables
+$extraBig-device: "only screen and (min-width: 1600px)";
+$laptop-device: "only screen and (min-width: 1200px) and (max-width: 1599px)";
+$desktop-device: "only screen and (min-width: 992px) and (max-width: 1199px)";
+$tablet-device: "only screen and (min-width: 768px) and (max-width: 991px)";
+$large-mobile: "only screen and (max-width: 767px)";
+$small-mobile: "only screen and (max-width: 575px)";
+$extra-small-mobile: "only screen and (max-width: 479px)";
+
+//===============================
+// Bootstrap Variables Overright
+//===============================
+
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Color system
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+// fusv-disable
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+) !default;
+// fusv-enable
+
+$blue:    #0d6efd !default;
+$dark-blue:    #004a80 !default;
+$lower-blue:    #8194d9 !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #d63384 !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #198754 !default;
+$teal:    #20c997 !default;
+$cyan:    #0dcaf0 !default;
+
+// scss-docs-start colors-map
+$colors: (
+  "blue":       $blue,
+  "dark-blue":  $dark-blue,
+  "lower-blue": $lower-blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+) !default;
+// scss-docs-end colors-map
+
+$primary:       #309255 !default;
+$secondary:     #e7f8ee !default;
+$success:       $green !default;
+$info:          #363b42 !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          #212832 !default;
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+) !default;
+// scss-docs-end theme-colors-map
+
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-negative-margins: true;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem;
+$spacers: (
+	0: 0,
+	1: $spacer * 0.3125,
+	2: $spacer * 0.625,
+	3: $spacer * 0.9375,
+	4: $spacer * 1.25,
+	5: $spacer * 1.625,
+	6: $spacer * 1.875,
+	7: $spacer * 2.1875,
+	8: $spacer * 2.5,
+	9: $spacer * 2.8125,
+	10: $spacer * 3.125,
+);
+$body-color: #52565b;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1600px,
+);
+// scss-docs-end grid-breakpoints
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1200px,
+	xxl: 1200px,
+);
+// scss-docs-end container-max-widths
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-gutter-width: 30px;
+//
+$gutters: $spacers;
+
+// Border
+$border-width:                1px !default;
+$border-color:                $gray-300 !default;
+
+$border-radius:               .25rem !default;
+$border-radius-sm:            .2rem !default;
+$border-radius-lg:            .3rem !default;
+$border-widths: (
+  0: 0,
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px
+) !default;
+
+// Transition
+$transition-base: all 0.3s ease 0s;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-enable value-keyword-case
+$font-family-base: 'Gordita';
+
+
+// $font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
+// $font-size-base effects the font size of the body text
+$font-size-root:              null !default;
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm:                $font-size-base * .875 !default;
+$font-size-lg:                $font-size-base * 1.25 !default;
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default;
+$font-weight-semi:            600 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+
+
+$line-height-base: 1.5;
+//
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+//
+$headings-font-family: 'Gordita';
+$headings-font-weight: 500;
+$headings-line-height: 1.2;
+$headings-color: #1d2733;
+
+
+
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-padding-y:         0 !default;
+$input-btn-padding-x:         2.188rem !default;
+$input-btn-font-family:       $headings-font-family !default;
+$input-btn-font-size:         18px !default;
+
+$input-btn-focus-width:         0 !default;
+$input-btn-focus-color-opacity: 0 !default;
+$input-btn-focus-color:         null !default;
+$input-btn-focus-box-shadow:    null !default;
+
+$input-btn-padding-y-sm:      .25rem !default;
+$input-btn-padding-x-sm:      .5rem !default;
+$input-btn-font-size-sm:      $font-size-sm !default;
+
+$input-btn-padding-y-lg:      .5rem !default;
+$input-btn-padding-x-lg:      1rem !default;
+$input-btn-font-size-lg:      $font-size-lg !default;
+
+$input-btn-border-width:      0 !default;
+
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-padding-y:               $input-btn-padding-y !default;
+$btn-padding-x:               $input-btn-padding-x !default;
+$btn-font-family:             $input-btn-font-family !default;
+$btn-font-size:               $input-btn-font-size !default;
+$btn-line-height:             3.75rem !default;
+$btn-white-space:             null !default; // Set to `nowrap` to prevent text wrapping
+
+$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
+$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
+$btn-font-size-sm:            $input-btn-font-size-sm !default;
+
+$btn-padding-y-lg:            $input-btn-padding-y-lg !default;
+$btn-padding-x-lg:            $input-btn-padding-x-lg !default;
+$btn-font-size-lg:            $input-btn-font-size-lg !default;
+
+$btn-border-width:            $input-btn-border-width !default;
+
+$btn-font-weight:             $font-weight-medium !default;
+$btn-box-shadow:              0 !default;
+$btn-focus-width:             0 !default;
+$btn-focus-box-shadow:        0 !default;
+$btn-disabled-opacity:        .65 !default;
+$btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
+
+$btn-link-color:              null !default;
+$btn-link-hover-color:        null !default;
+$btn-link-disabled-color:     $gray-600 !default;
+
+$btn-block-spacing-y:         .5rem !default;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius:           10px !default;
+$btn-border-radius-sm:        $border-radius-sm !default;
+$btn-border-radius-lg:        $border-radius-lg !default;
+
+$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+
+
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-smooth-scroll: false;

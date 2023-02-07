@@ -1,0 +1,165 @@
+/*--
+/*  4.8 - Blog CSS
+/*----------------------------------------*/
+
+// Blog Wrapper 
+.blog-wrapper{
+    padding-top: 20px;
+}
+
+// Single Blog 
+.single-blog{
+    margin-top: 30px;
+    border: 1px solid rgba($primary, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    transition: $transition-base;
+
+    & .blog-image{
+        & a{
+            display: block;
+
+            & img{
+                width: 100%;
+                border-radius: 15px;
+            }
+        }
+    }
+    
+    & .blog-content{
+        padding-top: 25px;
+
+        & .blog-author{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            & .author{
+                display: flex;
+                align-items: center;
+
+                & .author-thumb{
+                    & a{
+                        display: block;
+
+                        & img{
+                            width: 50px;
+                            border-radius: 50%;
+
+                            @media #{$desktop-device, $small-mobile}{
+                                width: 45px;
+                            }
+                        }
+                    }
+                }
+                & .author-name{
+                    flex: 1;
+                    padding-left: 12px;
+
+                    & .name{
+                        color: #52565b;
+                        font-size: 14px;
+                        font-weight: 400;
+
+                        @media #{$desktop-device, $small-mobile}{
+                            font-size: 13px;
+                        }
+
+                        &:hover{
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+            & .tag{
+                & a{
+                    width: 100px;
+                    height: 35px;
+                    line-height: 35px;
+                    background-color: #e7f8ee;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    color: $primary;
+                    display: inline-block;
+                    text-align: center;
+                    border-radius: 5px;
+                    padding: 0 10px;
+
+                    @media #{$desktop-device, $small-mobile}{
+                        width: 80px;
+                        font-size: 13px;
+                    }
+
+                    &:hover{
+                        background-color: $primary;
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        & .title{
+            & a{
+                font-size: 16px;
+                font-weight: 500;
+                color: $dark;
+                margin-top: 13px;
+                display: inline-block;
+                line-height: 1.4;
+
+                @media #{$desktop-device}{
+                    font-size: 14px;
+                }
+
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+
+        & .blog-meta{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10px;
+
+            & span{
+                font-size: 14px;
+                font-weight: 400;
+                color: #52565b;
+                margin-right: 20px;
+                display: inline-block;
+                line-height: 1;
+
+                &:last-child{
+                    margin-right: 0;
+                }
+
+                & i{
+                    color: $primary;
+                    margin-right: 5px;
+                    font-size: 20px;
+                    display: inline-block;
+                    line-height: 1;
+                }
+            }
+        }
+
+        & .btn{
+            padding: 0 20px;
+            height: 45px;
+            line-height: 39px;
+            border: 1px solid rgba($primary, 0.2);
+            font-size: 15px;
+            margin-top: 30px;
+        }
+    }
+
+    &:hover{
+        border-color: $primary;
+    }
+}
+
+
+
+
+

@@ -1,0 +1,87 @@
+/*--
+/*  4.3 - Call to Action CSS
+/*----------------------------------------*/
+
+// Call to ACtion Wrapper 
+.call-to-action-wrapper{
+    background-color: $secondary;
+    border-radius: 10px;
+    padding: 20px 100px 50px;
+    position: relative;
+
+    @media #{$desktop-device, $tablet-device, $large-mobile}{
+        padding: 20px 60px 50px;
+    }
+    @media #{$small-mobile}{
+        padding: 0px 30px 30px;
+    }
+
+    & .cat-shape-01{
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+
+        @media #{$small-mobile}{
+            display: none;
+        }
+    }
+    & .cat-shape-02{
+        position: absolute;
+        top: 50%;
+        left: 57.5%;
+        transform: translate(-50%, -50%);
+        width: 179px;
+
+        @media #{$desktop-device}{
+            width: 150px;
+        }
+        @media #{$tablet-device, $large-mobile}{
+            display: none;
+        }
+    }
+    & .cat-shape-03{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+
+        @media #{$small-mobile}{
+            display: none;
+        }
+    }
+
+    & .section-title{
+        max-width: 415px;
+        margin-top: 25px;
+
+        & .sub-title{}
+        & .main-title{}
+    }
+}
+
+// Call to ACtion Button
+.call-to-action-btn{
+    text-align: right;
+    margin-top: 30px;
+
+    @media #{$large-mobile}{
+        text-align: left;
+    }
+
+    & .btn{}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

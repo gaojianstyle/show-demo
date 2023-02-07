@@ -1,0 +1,75 @@
+/*--
+/*  4.12 - Team CSS
+/*----------------------------------------*/
+
+// Team Wrapper 
+.team-wrapper{
+    margin-bottom: -7px;
+}
+
+
+// Single Team 
+.single-team{
+    text-align: center;
+    margin-top: 50px;
+
+    & .team-thumb{
+        & img{
+            border-radius: 50%;
+            padding: 10px;
+            border: 1px solid rgba($primary, 0.2);
+            transition: $transition-base;
+        }
+    }
+    & .team-content{
+        padding-top: 15px;
+
+        & .rating{
+            display: inline-flex;
+            align-items: center;
+
+            & .count{
+                font-size: 14px;
+                font-weight: 500;
+                color: $dark;
+            }
+            & i{
+                color: #ffba00;
+                margin: 0 5px;
+            }
+            & .text{
+                font-size: 13px;
+                font-family: serif;
+                font-weight: 400;
+                color: #848886;
+            }
+        }
+        & .name{
+            font-weight: 500;
+            font-size: 20px;
+            margin-bottom: 0;
+
+            @media #{$desktop-device, $small-mobile}{
+                font-size: 16px;
+            }
+        }
+        & .designation{
+            display: block;
+            font-size: 14px;
+            color: $primary;
+            margin-top: 10px;
+        }
+    }
+    &:hover{
+        & .team-thumb{
+            & img{
+                border-color: $primary;
+            }
+        }
+    }
+}
+
+
+
+
+

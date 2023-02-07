@@ -1,0 +1,91 @@
+/*--
+/*  4.17 - 404 Error CSS
+/*----------------------------------------*/
+
+
+// Error Wrapper
+.error-wrapper{}
+
+// Error Images
+.error-images{
+    margin-top: 50px;
+}
+
+// Error Images
+.error-content{
+    max-width: 470px;
+    margin-left: auto;
+    margin-top: 45px;
+
+    @media #{$tablet-device, $large-mobile}{
+        max-width: 430px;
+        margin-left: 0;
+    }
+
+    & .sub-title{
+        font-size: 20px;
+        font-weight: 500;
+        font-family: $headings-font-family;
+        color: $primary;
+        margin-bottom: 20px;
+
+        @media #{$tablet-device, $small-mobile}{
+            font-size: 16px;
+        }
+    }
+    & .main-title{
+        font-size: 40px;
+        font-weight: 500;
+        margin-bottom: 0;
+        line-height: 1.4;
+
+        @media #{$desktop-device, $tablet-device, $large-mobile}{
+            font-size: 35px;
+        }
+        @media #{$small-mobile}{
+            font-size: 24px;
+        }
+
+        & span{
+            color: $primary;
+            position: relative;
+
+            &::before{
+                position: absolute;
+                content: '';
+                background-image: url(../images/shape/shape-4.png);
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 210px;
+                height: 21px;
+                left: 50%;
+                bottom: -20px;
+                transform: translateX(-50%);
+
+                @media #{$tablet-device}{
+                    width: 140px;
+                    height: 15px;
+                }
+                @media #{$small-mobile}{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    & P{
+        font-size: 18px;
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+
+    & .btn{
+        margin-top: 35px;
+    }
+}
+
+
+
+
+

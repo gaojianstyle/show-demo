@@ -1,0 +1,107 @@
+/*----------------------------------------*/
+/*  06. Footer CSS
+/*----------------------------------------*/
+
+// Footer Section 
+.footer-section{
+    background-color: $secondary;
+}
+
+// Footer Copyright
+.footer-copyright{
+    background-color: $dark;
+}
+
+// Copyright Wrapper
+.copyright-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    padding-top: 5px;
+
+    @media #{$tablet-device, $large-mobile}{
+        display: block;
+        text-align: center;
+    }
+}
+
+// Copyright Text
+.copyright-link{
+    padding-top: 15px;
+
+    & a{
+        font-weight: 400;
+        font-size: 14px;
+        color: $white;
+        position: relative;
+
+        & + a{
+            &::before{
+                content: '*';
+                font-size: 15px;
+                color: #a6afba;
+                margin-left: 5px;
+                margin-right: 10px;
+            }
+        }
+
+        &:hover{
+            color: $primary;
+        }
+    }
+}
+
+// Copyright Text
+.copyright-text{
+    padding-top: 15px;
+
+    & p{
+        color: $white;
+        font-size: 14px;
+        font-weight: 400;
+        
+        & span{
+            color: $primary;
+            text-transform: uppercase;
+        }
+        
+        & i{
+            color: #ff0000;
+        }
+        
+        & a{
+            color: $primary;
+            transition: $transition-base;
+            font-weight: 500;
+            
+            &:hover{
+                color: $primary;
+            }
+        }
+    }
+}
+
+// Back to Top
+.back-to-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 36px;
+    border-radius: 50%;
+    z-index: 99;
+    text-align: center;
+    display: none;
+    box-shadow: 2px 4px 8px rgba($dark, 0.15);  
+    transition: all 0.3s linear;
+    color: $white;
+    background-color: $primary;
+
+    &:hover{
+        color: $white;
+        background-color: $dark;    
+    }
+}
+

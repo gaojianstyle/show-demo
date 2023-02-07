@@ -1,0 +1,51 @@
+/*--
+/*  2.2 - Blockquote CSS
+/*----------------------------------------*/
+
+.blockquote{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: 22px;
+    padding-bottom: 8px;
+    padding-left: 55px;
+
+    @media #{$large-mobile}{
+        padding-left: 0;
+    }
+
+    @media #{$small-mobile}{
+        display: block;
+    }
+
+    & .quote{
+        font-size: 150px;
+        font-weight: 500;
+        color: $primary;
+        line-height: 120px;
+        height: 60px;
+        display: block;
+    }
+
+    & p {
+        flex: 1;
+        font-family: $headings-font-family;
+        font-size: 20px !important;
+        font-weight: 500 !important;
+        color: $dark !important;
+        margin-top: 0 !important;
+        margin-bottom: 0;
+        padding-left: 23px;
+        line-height: 1.58;
+
+        @media #{$large-mobile}{
+            font-size: 18px !important;
+            padding-left: 30px;
+        }
+        @media #{$small-mobile}{
+            padding-left: 0;
+            padding-top: 15px;
+            font-size: 16px !important;
+        }
+    }    
+}

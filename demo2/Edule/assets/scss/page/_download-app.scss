@@ -1,0 +1,183 @@
+/*--
+/*  4.5 - Download App CSS
+/*----------------------------------------*/
+
+// Download Section 
+.download-section{
+    background-color: $primary;
+    position: relative;
+    overflow: hidden;
+
+    & .app-shape-1{
+        width: 560px;
+        height: 560px;
+        border: 1px solid rgba($white, 0.15);
+        border-radius: 50%;
+        left: 70px;
+        bottom: 85px;
+        position: absolute;
+
+        @media #{$tablet-device}{
+            width: 360px;
+            height: 360px;
+        }
+        @media #{$large-mobile}{
+            width: 260px;
+            height: 260px;
+            bottom: 50px;
+            left: 30px;
+        }
+    }
+    & .app-shape-2{
+        width: 560px;
+        height: 560px;
+        border: 1px solid rgba($white, 0.15);
+        border-radius: 50%;
+        left: 31%;
+        top: 60px;
+        position: absolute;
+
+        @media #{$tablet-device}{
+            width: 360px;
+            height: 360px;
+        }
+        @media #{$large-mobile}{
+            width: 260px;
+            height: 260px;
+            top: auto;
+            bottom: -40px;
+        }
+    }
+    & .app-shape-3{
+        width: 560px;
+        height: 560px;
+        border: 1px solid rgba($white, 0.15);
+        border-radius: 50%;
+        right: 15%;
+        bottom: 70%;
+        position: absolute;
+
+        @media #{$tablet-device}{
+            width: 360px;
+            height: 360px;
+        }
+        @media #{$large-mobile}{
+            width: 260px;
+            height: 260px;
+        }
+    }
+    & .app-shape-4{
+        width: 560px;
+        height: 560px;
+        border: 1px solid rgba($white, 0.15);
+        border-radius: 50%;
+        right: -243px;
+        top: -50px;
+        position: absolute;
+
+        @media #{$tablet-device}{
+            width: 360px;
+            height: 360px;
+        }
+        @media #{$large-mobile}{
+            width: 260px;
+            height: 260px;
+            right: -100px;
+            top: 30px;
+        }
+    }
+}
+
+// Download App Wrapper 
+.download-app-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    @media #{$large-mobile}{
+        display: block;
+    }
+
+    & .section-title{
+        max-width: 520px;
+        margin-top: 25px;
+        padding-right: 15px;
+
+        @media #{$large-mobile}{
+            padding-right: 0;
+        }
+    }
+
+    & .shape-1{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+
+        @media #{$tablet-device, $large-mobile}{
+            display: none;
+        }
+    }
+}
+
+// Download App Button
+.download-app-btn{
+    padding-top: 20px;
+    padding-left: 15px;
+
+    @media #{$large-mobile}{
+        padding-left: 0;
+    }
+
+    & .app-btn{
+        display: flex;
+
+        @media #{$small-mobile}{
+            flex-wrap: wrap;
+        }
+
+        & li{
+            margin-right: 30px;
+            padding-top: 20px;
+
+            &:last-child{
+                margin-right: 0;
+            }
+
+            & a{
+                width: 180px;
+                height: 63px;
+                display: inline-block;
+                background-color: $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                box-shadow: 0 0 0 5px rgba($white, 0.15);
+
+                @media #{$tablet-device}{
+                    width: 150px;
+                    height: 53px;
+                }
+
+                & img{
+                    @media #{$tablet-device}{
+                        width: 120px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

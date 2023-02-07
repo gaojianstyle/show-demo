@@ -1,0 +1,152 @@
+/*--
+/*  3.1 - Header Top CSS
+/*----------------------------------------*/
+
+
+// Header Top
+.header-top{
+    background-color: $dark;
+}
+
+// Header Top Wrapper
+.header-top-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 7px;
+}
+
+// Header Top Left
+.header-top-left{
+    padding-top: 10px;
+    & p{
+        font-size: 15px;
+        color: $white;
+        font-weight: 400;
+        margin-bottom: 0;
+        line-height: 1.4;
+
+        & a{
+            color: $primary;
+            display: inline-block;
+            font-weight: 500;
+        }
+        
+    }
+}
+
+// Header Top Medal
+.header-top-medal{
+    padding-top: 10px;
+    position: relative;
+
+    &::before{
+        position: absolute;
+        content: '';
+        width: 41px;
+        height: 14px;
+        background-image: url(../images/shape/shape-1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -110px;
+        
+        @media #{$desktop-device}{
+            left: -55px;
+            width: 30px;
+            height: 10px;
+        }
+
+    }
+    &::after{
+        position: absolute;
+        content: '';
+        width: 41px;
+        height: 14px;
+        background-image: url(../images/shape/shape-2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -110px;
+
+        @media #{$desktop-device}{
+            right: -55px;
+            width: 30px;
+            height: 10px;
+        }
+    }
+
+    & .top-info{
+        display: flex;
+
+        & p{
+            font-size: 15px;
+            color: $white;
+            font-weight: 400;
+            margin-bottom: 0;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.4;
+
+            @media #{$desktop-device}{
+                font-size: 14px;
+            }
+
+            & + p{
+                margin-left: 50px;
+
+                @media #{$desktop-device}{
+                    margin-left: 25px;
+                }
+            }
+
+            & a{
+                color: $white;
+
+                &:hover{
+                    color: $primary;
+                }
+            }
+            & i{
+                color: $primary;
+                font-size: 20px;
+                padding-right: 15px;
+
+                @media #{$desktop-device}{
+                    font-size: 18px;
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+// Header Top Right
+.header-top-right{
+    padding-top: 10px;
+    & .social{
+        display: flex;
+
+        & li{
+            margin-right: 20px;
+
+            &:last-child{
+                margin-right: 0;
+            }
+
+            & a{
+                font-size: 20px;
+                color: $white;
+
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+
