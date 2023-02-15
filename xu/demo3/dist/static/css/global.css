@@ -1,0 +1,43 @@
+.xia{
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    height: 2.5rem;
+}
+.xia img{
+    position: absolute;
+    top: 0px;
+    animation-name: myfirst;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+@keyframes myfirst {
+  0% {
+    left: 50%;
+    top: 0%;
+  }
+  25% {
+    left: 50%;
+    top: 10%;
+  }
+  50% {
+    left: 50%;
+    top: 20%;
+  }
+  75% {
+    left: 50%;
+    top: 30%;
+  }
+  100% {
+    left: 50%;
+    top: 40%;
+  }
+}
+.xie_xian{
+    height: 0.4rem;
+    line-height: 0.4rem;
+    background: url(../../src/assets/xie_xian.png) repeat-x;
+}

@@ -1,0 +1,2 @@
+webpackJsonp([14],{"55eF":function(e,t){},zC7h:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r={data:function(){return{title:"我的订单"}},components:{BHeader:n("Jhja").a},methods:{}},a={render:function(){var e=this.$createElement,t=this._self._c||e;return t("div",{staticClass:"my-order"},[t("b-header",{attrs:{title:this.title}})],1)},staticRenderFns:[]};var s=n("VU/8")(r,a,!1,function(e){n("55eF")},"data-v-274229c7",null);t.default=s.exports}});
+//# sourceMappingURL=14.6b1bc4a5fd8fe351a797.js.map
