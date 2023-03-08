@@ -71,15 +71,103 @@
 # >>>>>>> 14b3efa3fd1cee27ee6f5cb8fbfe2a6e60c838de
 
 
-image: busybox
+# image: busybox
+
+# pages:
+#   stage: deploy
+#   script:
+#   - echo 'Nothing to do...'
+#   artifacts:
+#     paths:
+#     - public
+#     expire_in: 1 day
+#   rules:
+#     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+
+# ! /////////////////////////////////////////////////////////////////////
+# /ee/user/project/pages/introduction.html#user-or-group-pages
+
+
 
 pages:
-  stage: deploy
   script:
-  - echo 'Nothing to do...'
+    - mkdir .public
+    - cp -r * .public
+    - mv .public public
   artifacts:
     paths:
-    - public
-    expire_in: 1 day
-  rules:
-    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+      # - public
+      - /
+  only:
+    - main
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
