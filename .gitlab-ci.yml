@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+# <<<<<<< HEAD
 # # This file is a template, and might need editing before it works on your project.
 # # You can copy and paste this template into a new `.gitlab-ci.yml` file.
 # # You should not add this template to an existing `.gitlab-ci.yml` file by using the `include:` keyword.
@@ -96,7 +96,8 @@ pages:
     - mv .public public
   artifacts:
     paths:
-      - public
+      # - public
+      - /
   only:
     - main
 
