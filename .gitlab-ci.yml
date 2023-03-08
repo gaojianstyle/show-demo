@@ -42,6 +42,35 @@
 #   environment: production
 
 
+# image: busybox
+
+# pages:
+#   stage: deploy
+#   script:
+#   - echo 'Nothing to do...'
+#   artifacts:
+#     paths:
+#     - public
+#     expire_in: 1 day
+#   rules:
+#     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+# =======
+# # pages:
+# #   stage: deploy
+# #   script:
+# #     - mkdir .public
+# #     - cp -r ./* .public
+# #     - rm -rf public
+# #     - mv .public public
+# #   artifacts:
+# #     paths:
+# #       - public
+# #   rules:
+# #     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+# >>>>>>> 14b3efa3fd1cee27ee6f5cb8fbfe2a6e60c838de
+
+
 image: busybox
 
 pages:
@@ -54,18 +83,3 @@ pages:
     expire_in: 1 day
   rules:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
-=======
-# pages:
-#   stage: deploy
-#   script:
-#     - mkdir .public
-#     - cp -r ./* .public
-#     - rm -rf public
-#     - mv .public public
-#   artifacts:
-#     paths:
-#       - public
-#   rules:
-#     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-
->>>>>>> 14b3efa3fd1cee27ee6f5cb8fbfe2a6e60c838de
